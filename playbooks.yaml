@@ -1,0 +1,11 @@
+---
+- hosts: demo
+  connection: ssh
+  become: yes
+  vars:
+    ansible_password: 'test'
+  tasks:
+    - name: Install apache2
+      apt: 
+        name: apache2
+        state: present
